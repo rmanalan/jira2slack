@@ -49,7 +49,8 @@ function toSlack (jiraMD) {
     .replace(/\{\{([^}]+)\}\}/g, '`$1`')
 
     // Citations
-    .replace(/\?\?((?:.[^?]|[^?].)+)\?\?/g, '_-- $1_')
+    // TODO this regex can cause an infinite loop
+    // .replace(/\?\?((?:.[^?]|[^?].)+)\?\?/g, '_-- $1_')
 
     // Superscript
     .replace(/\^([^^]*)\^/g, '^$1')

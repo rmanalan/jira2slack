@@ -80,11 +80,11 @@ test('JIRA to Slack: Check Individual Formatting', (assert) => {
     'Monospace'
   );
 
-  assert.equal(
-    J2S.toSlack('Citations: ??citation??\n'),
-    'Citations: _-- citation_\n',
-    'Citations'
-  );
+  // assert.equal(
+  //   J2S.toSlack('Citations: ??citation??\n'),
+  //   'Citations: _-- citation_\n',
+  //   'Citations'
+  // );
 
   assert.equal(
     J2S.toSlack('Subscript: ~subscript~\n'),
